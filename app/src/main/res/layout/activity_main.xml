@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewModel" type="com.example.hamu.databindtest.viewmodel.MainViewModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        tools:context="com.re_engines.myapp.databinding.activity.MainActivity">
+        <EditText
+            android:layout_width="368dp"
+            android:layout_height="92dp"
+            android:text="@={viewModel.messageEditText}"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteY="81dp"
+            tools:layout_editor_absoluteX="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@{viewModel.messageLength}"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteY="81dp"
+            tools:layout_editor_absoluteX="0dp"/>
+    </LinearLayout>
+</layout>
